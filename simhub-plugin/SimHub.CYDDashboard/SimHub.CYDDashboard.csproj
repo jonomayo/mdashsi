@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>SimHub.CYDDashboard</AssemblyName>
+    <RootNamespace>SimHub.CYDDashboard</RootNamespace>
+    <LangVersion>7.3</LangVersion>
+    <SimHubInstallPath Condition="'$(SimHubInstallPath)' == ''">C:\Program Files (x86)\SimHub</SimHubInstallPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="SimHub.Plugins">
+      <HintPath>$(SimHubInstallPath)\SimHub.Plugins.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GameReaderCommon">
+      <HintPath>$(SimHubInstallPath)\GameReaderCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
